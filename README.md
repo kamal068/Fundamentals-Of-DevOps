@@ -80,3 +80,14 @@
 
 - **Limitattions:**
 - API key is plain text in application file
+
+- **System Architecture**
+- **To architecture the system folloing services considered.**
+  - Cloud Flare DNS zone manages all simple domains and subdomains, as well as MX  and TXT records.
+  - FrontEND ALB is using the front end for subdomains. Will use HTTP & HTTPS on LAB with Amazon ACM Certificate.
+  -	FrontEND ASG is autoscaling in target CPU utilization & and using an EC2 template.
+  - Use Elastic Redis Cache for FrontEND.
+  - Using RDS DB master & and read replica.
+  - Stroing Redis log into the s3 bucket.
+  - Using Amazon Cloudfront provides static & and media content with S3.
+

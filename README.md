@@ -79,4 +79,4 @@ Modify the terraform variables
 Install docker 
 
 **Limitattions:**
-API key is plain text in application file.
+API key is plain text in application file
